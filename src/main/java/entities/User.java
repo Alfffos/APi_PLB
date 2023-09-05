@@ -20,7 +20,7 @@ public class User {
     private String lastName;
     @OneToOne
     @JoinColumn(name = "role_id")
-    private Rol role;                        //falta crear la entidad Rol para usarlo como tipo de dato.
+    private Rol role;                          //falta crear la entidad Rol para usarlo como tipo de dato.
 
     public Integer getUserId() {
         return userId;
