@@ -1,16 +1,22 @@
 package entities;
-
-import
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 public class Posted {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "id",nullable = false)
     private Integer postedId;
+    @OneToOne
+    @JoinColumn
+    private User user;
     @Column
-    private String
+    private String pictured;
+    @Column
+    private  String name_posted;
+    @Column
+    private String description;
+    @Column
+    private Integer locationX;
+    @Column Integer locationY;
+
 }
